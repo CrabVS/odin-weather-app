@@ -17,6 +17,10 @@ body {
     background-size: cover;
 }
 
+h3 {
+    font-size: 2.4rem;
+}
+
 .btn {
     cursor: pointer;
     min-width: 80px;
@@ -35,7 +39,7 @@ body {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -83,4 +87,10 @@ body {
 
 .info-sub-block {
     display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.info-sub-block img {
+    margin-right: 10px;
 }
