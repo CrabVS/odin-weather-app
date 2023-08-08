@@ -68,3 +68,19 @@
 #error-msg {
     position: absolute;
 }
+
+@media (max-width: 700px) {
+    #main-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info-block {
+        width: 100%;
+    }
+
+    #main-container .info-sub-block {
+        justify-content: center;
+        text-align: center;
+    }
+}
