@@ -1,0 +1,52 @@
+/*
+IMG Credit
+https://unsplash.com/@worldsbetweenlines
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1679344424193-b862cf2f5630?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80");
+    background-color: #555;
+    height: 100vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#top-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+#top-container form {
+    margin-bottom: 20px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.info-sub-block {
+    display: flex;
+}
