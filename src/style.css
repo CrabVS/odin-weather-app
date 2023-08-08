@@ -17,6 +17,23 @@ body {
     background-size: cover;
 }
 
+.btn {
+    cursor: pointer;
+    min-width: 80px;
+    padding: 4px 0;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
 .container {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
@@ -31,8 +48,25 @@ body {
     padding: 30px 0;
 }
 
-#top-container form {
+#location-form {
     margin-bottom: 20px;
+}
+
+#location-search {
+    padding: 10px 16px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#data-button-group {
+    min-width: 260px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #main-container {
