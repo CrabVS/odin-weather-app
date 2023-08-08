@@ -8,6 +8,7 @@ const sortWeatherData = async function sortWeatherData(weatherData) {
     humidity: weatherData.current.humidity,
     tempC: weatherData.current.temp_c,
     tempF: weatherData.current.temp_f,
+    condition: weatherData.current.condition,
   };
 
   return sortedData;
