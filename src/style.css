@@ -83,6 +83,7 @@ h3 {
     width: 100%;
     margin: 0 auto;
     padding-bottom: 60px;
+    position: relative;
 }
 
 .info-sub-block {
@@ -93,4 +94,17 @@ h3 {
 
 .info-sub-block img {
     margin-right: 10px;
+}
+
+#loader {
+    position: absolute;
+    display: none;
+}
+
+#loader.show-loader {
+    display: initial;
+}
+
+#error-msg {
+    position: absolute;
 }

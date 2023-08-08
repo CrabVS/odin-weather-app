@@ -15,11 +15,15 @@ const sortWeatherData = async function sortWeatherData(weatherData) {
 };
 
 const getWeather = async function getWeather(location) {
-  const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}`);
-  const responseData = await response.json();
-  const weatherData = sortWeatherData(responseData);
+  try {
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}`);
+    const responseData = await response.json();
+    const weatherData = sortWeatherData(responseData);
 
-  return weatherData;
+    return weatherData;
+  } catch (errorRes) {
+    return errorRes;
+  }
 };
 
 export default getWeather;

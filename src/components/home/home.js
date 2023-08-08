@@ -1,5 +1,6 @@
 import getWeather from '../services/weather-service';
 import './home.css';
+import './loading.css';
 
 let currentLocation;
 let currentDeg = 'C';
@@ -70,15 +71,41 @@ const updatePage = function updatePageInformation(weatherData) {
   infoElements.humidity.textContent = `Humidity: ${weatherData.humidity}`;
 };
 
+const clearLoading = function clearLoading() {
+  const loader = document.getElementById('loader');
+
+  loader.classList.remove('show-loader');
+};
+
 const showLoading = function showLoading() {
+  const loader = document.getElementById('loader');
+
   clearDisplay();
+  loader.classList.add('show-loader');
+};
+
+const clearError = function clearError() {
+  const errorHeaderEl = document.querySelector('#error-msg h3');
+  errorHeaderEl.textContent = '';
+};
+
+const displayError = function displayError() {
+  const errorHeaderEl = document.querySelector('#error-msg h3');
+  errorHeaderEl.textContent = 'An Error has Occurred';
 };
 
 const fetchData = async function fetchData(location) {
+  clearError();
   showLoading();
-  const weatherData = await getWeather(location);
-  updatePage(weatherData);
-  currentLocation = weatherData.location;
+  try {
+    const weatherData = await getWeather(location);
+    updatePage(weatherData);
+    currentLocation = weatherData.location;
+  } catch (error) {
+    console.log(error);
+    displayError();
+  }
+  clearLoading();
   enableElements();
 };
 
